@@ -31,10 +31,7 @@ NovaAI provides a single, managed SaaS platform with a usage dashboard, tiered s
 |---|---|
 | **Solo Developer** | Building side projects or prototypes using AI APIs |
 | **Product Team** | Integrating AI into a commercial product with usage tracking needs |
-| **Enterprise Team** | Requiring SSO, audit logs, RBAC, and SLA-backed support |
-
----
-
+| **Enterprise Team** | Requiring SSO, audit logs, RBAC, and SLA-backed support 
 ## 2. Goals & Success Metrics
 
 ### 2.1 Business Goals
