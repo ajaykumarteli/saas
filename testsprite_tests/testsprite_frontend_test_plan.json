@@ -1,0 +1,1459 @@
+[
+  {
+    "id": "TC001",
+    "title": "Landing page loads and shows core sections",
+    "description": "Verifies the landing page renders hero, features, pricing, and footer content to a first-time visitor.",
+    "category": "Landing Page",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify page title contains \"NovaAI\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Get Started\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Features\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Pricing\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Free\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Pro\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Footer\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Hero CTA navigates to Signup from landing page",
+    "description": "Verifies clicking the primary hero CTA takes the user from the landing page to the signup page.",
+    "category": "Landing Page",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Get Started\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click on \"Get Started\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/signup\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Sign up\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Email\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Password\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Navbar Sign Up link navigates to Signup",
+    "description": "Verifies the user can reach the signup page using the landing page navigation.",
+    "category": "Landing Page",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click on \"Sign Up\" in the navigation bar"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/signup\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Sign up\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Confirm Password\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Sign In to Dashboard CTA navigates to Login",
+    "description": "Verifies the landing page CTA for signing in routes the user to the login page.",
+    "category": "Landing Page",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Sign In to Dashboard\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click on \"Sign In to Dashboard\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/login\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Login\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Email\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Password\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Features section is reachable and contains feature highlights",
+    "description": "Verifies the user can browse the features showcase and see multiple feature highlight items.",
+    "category": "Landing Page",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Features\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to \"Features\" section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Features\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"feature highlight\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"feature highlight\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Pricing section shows Free and Pro plans",
+    "description": "Verifies the pricing section presents both Free and Pro plans for comparison.",
+    "category": "Landing Page",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to \"Pricing\" section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Pricing\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Free\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Pro\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"pricing plan\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"pricing plan\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Footer is visible and contains expected navigation/help text",
+    "description": "Verifies the landing page footer is present and displays recognizable footer content to the user.",
+    "category": "Landing Page",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to \"Footer\" section"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Footer\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"NovaAI\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"footer link\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Successful signup redirects to dashboard and shows Free plan badge",
+    "description": "Verifies a new user can sign up with a valid email and matching passwords, then is redirected to the dashboard where the Free plan badge is visible.",
+    "category": "User Signup",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"new.user+e2e1@example.com\" into the email input field"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"StrongPass!234\" into the password input field"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Strong\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"StrongPass!234\" into the confirm password input field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Create Account button to submit"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Free\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Password strength indicator shows Weak for a simple password",
+    "description": "Verifies the password strength indicator updates to Weak when a low-complexity password is entered.",
+    "category": "User Signup",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"new.user+e2e2@example.com\" into the email input field"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"12345\" into the password input field"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Weak\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"12345\" into the confirm password input field"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Create Account\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Password strength indicator shows Good for a moderate password",
+    "description": "Verifies the password strength indicator updates to Good when a moderate-strength password is entered.",
+    "category": "User Signup",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"new.user+e2e3@example.com\" into the email input field"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"NovaPass123\" into the password input field"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Good\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"NovaPass123\" into the confirm password input field"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Create Account\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Confirm password mismatch shows inline validation error and prevents signup",
+    "description": "Verifies submitting the form with mismatched confirm password shows an inline validation error and does not redirect to the dashboard.",
+    "category": "User Signup",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"new.user+e2e4@example.com\" into the email input field"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Mismatch!234\" into the password input field"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Different!234\" into the confirm password input field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Create Account button to submit"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Confirm password\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"do not match\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/signup\""
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Loading spinner appears on Create Account button during submission",
+    "description": "Verifies the submit button shows a loading state during signup submission.",
+    "category": "User Signup",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"new.user+e2e6@example.com\" into the email input field"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"SpinnerTest!234\" into the password input field"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"SpinnerTest!234\" into the confirm password input field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Create Account button to submit"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Loading\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Signup page link navigates to login page",
+    "description": "Verifies the signup page provides a link to the login page and navigation works.",
+    "category": "User Signup",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Log in\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click link to navigate to login page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/login\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Login\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Logo link from signup returns to landing page",
+    "description": "Verifies clicking the site logo from the signup page returns the user to the landing page.",
+    "category": "User Signup",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /signup"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Logo\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click logo link to navigate back to landing page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Pricing\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Login and land on Dashboard Overview with stats cards visible",
+    "description": "Verifies an authenticated user can reach the protected dashboard and see the Overview tab with key stats cards.",
+    "category": "Dashboard Overview",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Overview\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"API calls\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Tokens\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Auth rehydration shows loading state before rendering Overview",
+    "description": "Verifies the dashboard shows a loading screen while auth session is rehydrated, then renders the Overview content.",
+    "category": "Dashboard Overview",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Loading\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"API calls\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Overview tab is selected by default on initial dashboard load",
+    "description": "Verifies that after login the dashboard defaults to the Overview tab and shows expected Overview-only content.",
+    "category": "Dashboard Overview",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Overview\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Uptime\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Models\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "Free plan user sees the Upgrade banner on Overview",
+    "description": "Verifies the upgrade banner is visible for a Free plan user on the Overview tab.",
+    "category": "Dashboard Overview",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Upgrade\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Pro\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "Quick action from Overview navigates to Features tab content",
+    "description": "Verifies a user can use a quick action on Overview to navigate to the Features tab and see Features content.",
+    "category": "Dashboard Overview",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Overview\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Features\" quick action button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Features\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Features tab content\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC020",
+    "title": "Desktop sidebar navigation switches from Overview to Settings and back",
+    "description": "Verifies the sidebar navigation can switch tabs and return to Overview with stats visible again.",
+    "category": "Dashboard Overview",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Settings\" in the sidebar navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Settings\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Overview\" in the sidebar navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"API calls\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC021",
+    "title": "Free user can open Features tab and see the features list",
+    "description": "Verifies that an authenticated user can navigate to the Features tab and see the list of AI capabilities.",
+    "category": "Dashboard Features Tab",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Features\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Features\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"AI features list\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC022",
+    "title": "Features tab shows Free vs Pro-locked indicators on feature items",
+    "description": "Verifies that the Features list clearly marks which capabilities are locked behind the Pro plan.",
+    "category": "Dashboard Features Tab",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Features\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"AI features list\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Pro\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Locked\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC023",
+    "title": "Free plan user sees the upgrade banner on Features tab",
+    "description": "Verifies that Free users are shown an upgrade call-to-action banner on the Features tab.",
+    "category": "Dashboard Features Tab",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Features\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Upgrade banner\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Upgrade\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Pro\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC024",
+    "title": "Clicking a locked Pro-only feature prompts the user to upgrade",
+    "description": "Verifies that selecting a locked Pro feature results in an upgrade prompt/banner and does not grant access to the locked capability.",
+    "category": "Dashboard Features Tab",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Features\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Click on a feature item labeled \"Pro\" or \"Locked\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Upgrade banner\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Upgrade\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC025",
+    "title": "Locked feature does not open an accessible details/usage view",
+    "description": "Verifies that clicking a Pro-locked feature does not reveal an unlocked usage area and keeps the user gated by the upgrade messaging.",
+    "category": "Dashboard Features Tab",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Features\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Click on a feature item labeled \"Locked\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Locked\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Upgrade\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC026",
+    "title": "Upgrade banner remains visible after interacting with locked features",
+    "description": "Verifies that the upgrade CTA remains present after the user clicks a locked feature (no disappearance or inconsistent gating state).",
+    "category": "Dashboard Features Tab",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Features\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Upgrade banner\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click on a feature item labeled \"Pro\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Upgrade banner\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC027",
+    "title": "Features list remains visible when switching tabs away and back",
+    "description": "Verifies that navigating away from Features and returning preserves a stable, visible features list and gating indicators.",
+    "category": "Dashboard Features Tab",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Features\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"AI features list\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Overview\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Features\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"AI features list\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC028",
+    "title": "Update display name and company and save successfully",
+    "description": "Verifies a signed-in user can edit display name and company and sees a success confirmation after saving.",
+    "category": "Dashboard Settings Tab",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log In\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Settings\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Save Changes\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Type \"QA Updated Name\" into the display name field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"QA Updated Company\" into the company field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Save Changes\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Changes saved\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC029",
+    "title": "Log out from Settings redirects to login",
+    "description": "Verifies a user can log out from the Settings tab and is redirected to the login page with the login form visible.",
+    "category": "Dashboard Settings Tab",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log In\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Settings\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log Out\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/login\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Email\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC030",
+    "title": "Account details are visible on Settings (email, plan, member since)",
+    "description": "Verifies the Settings tab shows account detail fields such as email, plan, and member since.",
+    "category": "Dashboard Settings Tab",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log In\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Settings\" tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Account\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Email\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Plan\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Member since\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC031",
+    "title": "Editing only display name enables Save and persists after saving",
+    "description": "Verifies changing only the display name enables saving and the updated value remains visible after the save.",
+    "category": "Dashboard Settings Tab",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log In\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Settings\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Type \"Name Only Update\" into the display name field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Save Changes\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Changes saved\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC032",
+    "title": "Editing only company enables Save and persists after saving",
+    "description": "Verifies changing only the company enables saving and the updated value remains visible after the save.",
+    "category": "Dashboard Settings Tab",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Log In\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Settings\" tab"
+      },
+      {
+        "type": "action",
+        "description": "Type \"Company Only Update\" into the company field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Save Changes\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Changes saved\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC033",
+    "title": "Successful upgrade to Pro updates plan badge and hides upgrade banner",
+    "description": "Verifies that a Free user can upgrade to Pro and the UI reflects the Pro plan with the banner removed.",
+    "category": "Upgrade to Pro",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Log in button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Upgrade to Pro\" button on the upgrade banner"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Upgrading\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"⚡ Pro\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC034",
+    "title": "Upgrade shows loading state before completing",
+    "description": "Verifies that clicking Upgrade to Pro shows a visible loading state before the plan switches to Pro.",
+    "category": "Upgrade to Pro",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Log in button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Upgrade to Pro\" button on the upgrade banner"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Upgrading\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"⚡ Pro\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC035",
+    "title": "After successful upgrade, the upgrade banner disappears",
+    "description": "Verifies the upgrade banner is no longer shown once the user is on the Pro plan.",
+    "category": "Upgrade to Pro",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Log in button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Upgrade to Pro\" button on the upgrade banner"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"⚡ Pro\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Upgrade to Pro\" is not visible"
+      }
+    ]
+  },
+  {
+    "id": "TC036",
+    "title": "Successful upgrade shows a visible success confirmation",
+    "description": "Verifies that the UI displays a success confirmation after upgrading to Pro.",
+    "category": "Upgrade to Pro",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Log in button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Upgrade to Pro\" button on the upgrade banner"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"⚡ Pro\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Success\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC037",
+    "title": "Previously locked Pro features become accessible after upgrade",
+    "description": "Verifies that features previously marked as locked become accessible after upgrading to Pro.",
+    "category": "Upgrade to Pro",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the Log in button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Upgrade to Pro\" button on the upgrade banner"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"⚡ Pro\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Locked\" is not visible"
+      }
+    ]
+  }
+]

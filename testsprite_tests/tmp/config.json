@@ -1,0 +1,20 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "loginUser": "ajaykumarteli472@gmail.com",
+  "loginPassword": "9821@jaY_015",
+  "executionArgs": {
+    "projectName": "saas-dashboard",
+    "projectPath": "d:\\Youtube Project\\Testsprite\\SAAS\\saas-dashboard",
+    "testIds": [],
+    "additionalInstruction": "",
+    "serverMode": "production",
+    "envs": {
+      "API_KEY": "sk-user-SwBRVG_hUyxhNg0bhjDk24SX7dIcjGLfFcFSvr3FCwDEm-7o6Xg34ZO4n0Yb1F0sHSrwSGqIApEOBicJsrIaBnVCeBmzCFtXJ-OxhZ_3rooa72VSH4nNnDIfKIfBcf8BxNg"
+    }
+  },
+  "serverPort": 55387,
+  "proxy": "http://95fcc70b-cd2f-4440-b436-0e1f8b0564d4:BT2DtTslt2WMY0P6TcHQI6nBEtM9kypi@tun.testsprite.com:8080"
+}

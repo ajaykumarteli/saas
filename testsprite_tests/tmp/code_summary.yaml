@@ -1,0 +1,142 @@
+version: "2"
+type: frontend
+tech_stack:
+  - TypeScript
+  - Next.js 16
+  - React 19
+  - Tailwind CSS 4
+  - localStorage (mock auth)
+routes:
+  - path: /
+    file: src/app/page.tsx
+    auth_required: false
+    description: Landing page with Navbar, Hero, Features, Pricing, and Footer sections
+  - path: /login
+    file: src/app/(auth)/login/page.tsx
+    auth_required: false
+    description: User login page with email and password form
+  - path: /signup
+    file: src/app/(auth)/signup/page.tsx
+    auth_required: false
+    description: User signup page with email, password, confirm password, and password strength indicator
+  - path: /dashboard
+    file: src/app/dashboard/page.tsx
+    auth_required: true
+    description: Main dashboard with Overview, Features, and Settings tabs (protected by AuthGuard)
+features:
+  - name: Landing Page
+    description: Marketing landing page with hero section, features showcase, pricing plans, and footer
+    files:
+      - src/app/page.tsx
+      - src/components/landing/Navbar.tsx
+      - src/components/landing/Hero.tsx
+      - src/components/landing/Features.tsx
+      - src/components/landing/Pricing.tsx
+      - src/components/landing/Footer.tsx
+    entry_route: /
+    user_interactions:
+      - View hero section with CTA buttons
+      - Browse feature highlights
+      - Compare pricing plans (Free vs Pro)
+      - Navigate to login or signup via Navbar links
+      - Click Get Started or Sign Up buttons
+    api_calls: []
+    auth_required: false
+  - name: User Login
+    description: Login with email and password credentials, validates inputs, redirects to dashboard on success
+    files:
+      - src/app/(auth)/login/page.tsx
+      - src/context/AuthContext.tsx
+      - src/lib/utils.ts
+    entry_route: /login
+    user_interactions:
+      - Fill email input field
+      - Fill password input field
+      - Click Sign In button to submit
+      - See validation error messages on invalid inputs
+      - See error message on wrong credentials
+      - Click link to navigate to signup page
+      - Click logo link to navigate back to landing page
+    api_calls: []
+    auth_required: false
+  - name: User Signup
+    description: Create account with email, password, and confirm password. Includes password strength indicator.
+    files:
+      - src/app/(auth)/signup/page.tsx
+      - src/context/AuthContext.tsx
+      - src/lib/utils.ts
+    entry_route: /signup
+    user_interactions:
+      - Fill email input field
+      - Fill password input field
+      - See password strength indicator (Weak/Good/Strong)
+      - Fill confirm password input field
+      - Click Create Account button to submit
+      - See validation error messages on invalid inputs
+      - See error if email already exists
+      - Click link to navigate to login page
+      - Click logo link to navigate back to landing page
+    api_calls: []
+    auth_required: false
+  - name: Dashboard Overview
+    description: Dashboard overview tab showing stats cards, upgrade banner (free users), pro success banner, and quick action buttons
+    files:
+      - src/app/dashboard/page.tsx
+      - src/components/dashboard/StatsCards.tsx
+      - src/components/dashboard/UpgradeBanner.tsx
+      - src/components/dashboard/Sidebar.tsx
+      - src/components/auth/AuthGuard.tsx
+    entry_route: /dashboard
+    user_interactions:
+      - View stats cards (API calls, models, tokens, uptime)
+      - See upgrade banner if on free plan
+      - Click quick action buttons to navigate between tabs
+      - Use sidebar navigation on desktop
+      - Use mobile hamburger menu for navigation
+    api_calls: []
+    auth_required: true
+  - name: Dashboard Features Tab
+    description: List of AI features available with pro/free indicators
+    files:
+      - src/app/dashboard/page.tsx
+      - src/components/dashboard/FeatureList.tsx
+      - src/components/dashboard/UpgradeBanner.tsx
+    entry_route: /dashboard
+    user_interactions:
+      - View list of available AI features
+      - See which features are locked behind Pro plan
+      - See upgrade banner if on free plan
+    api_calls: []
+    auth_required: true
+  - name: Dashboard Settings Tab
+    description: Settings form to update user name and company, view account details, and logout
+    files:
+      - src/app/dashboard/page.tsx
+      - src/components/dashboard/SettingsForm.tsx
+    entry_route: /dashboard
+    user_interactions:
+      - Edit display name field
+      - Edit company name field
+      - Click Save Changes button
+      - View account details (email, plan, member since)
+      - Click Log Out button to sign out
+    api_calls: []
+    auth_required: true
+  - name: Upgrade to Pro
+    description: Upgrade from free to pro plan via dashboard upgrade banner
+    files:
+      - src/components/dashboard/UpgradeBanner.tsx
+      - src/context/AuthContext.tsx
+    entry_route: /dashboard
+    user_interactions:
+      - Click Upgrade to Pro button on the upgrade banner
+      - See plan status change from Free to Pro
+    api_calls: []
+    auth_required: true
+known_limitations:
+  - issue: Authentication is mock-based using localStorage, no real backend API
+    location: src/context/AuthContext.tsx
+    impact: User data is only persisted in browser localStorage, not to a server
+  - issue: No API calls, all data is client-side mock data
+    location: src/context/AuthContext.tsx
+    impact: Stats cards show hardcoded data, not real metrics
