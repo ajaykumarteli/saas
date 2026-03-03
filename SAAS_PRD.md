@@ -40,7 +40,7 @@ NovaAI provides a single, managed SaaS platform with a usage dashboard, tiered s
 - Establish a recurring revenue stream via monthly subscriptions
 - Achieve product-led growth through self-serve onboarding (no sales touch required)
 
-### 2.2 Success Metrics (KPIs)
+### 2.2 Success Metrics (KPIs
 
 | Metric | Target |
 |---|---|
