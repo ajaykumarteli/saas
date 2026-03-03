@@ -34,13 +34,12 @@ NovaAI provides a single, managed SaaS platform with a usage dashboard, tiered s
 | **Enterprise Team** | Requiring SSO, audit logs, RBAC, and SLA-backed support 
 ## 2. Goals & Success Metrics
 
-### 2.1 Business Goals
 
 - Acquire users on a free tier and convert them to Pro
 - Establish a recurring revenue stream via monthly subscriptions
 - Achieve product-led growth through self-serve onboarding (no sales touch required)
 
-### 2.2 Success Metrics (KPIs
+### 2.2 Success Metrics
 
 | Metric | Target |
 |---|---|
