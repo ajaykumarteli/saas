@@ -58,8 +58,6 @@ NovaAI provides a single, managed SaaS platform with a usage dashboard, tiered s
 - Protected SaaS dashboard
 - Subscription plan management (Free / Pro)
 - User profile settings
-- Feature gating by plan
-- Responsive mobile layout
 
 ### 3.2 Out of Scope (future versions)
 
