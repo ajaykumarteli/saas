@@ -39,8 +39,6 @@ NovaAI provides a single, managed SaaS platform with a usage dashboard, tiered s
 - Establish a recurring revenue stream via monthly subscriptions
 - Achieve product-led growth through self-serve onboarding (no sales touch required)
 
-### 2.2 Success Metrics
-
 | Metric | Target |
 |---|---|
 | Free-to-Pro Conversion Rate | ≥ 8% within 30 days of signup |
