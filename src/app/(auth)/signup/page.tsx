@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
@@ -13,13 +13,14 @@ export default function SignupPage() {
   const router = useRouter();
   const { signup, isAuthenticated, isLoading } = useAuth();
 
-  const [email, setEmail]                 = useState("");
-  const [password, setPassword]           = useState("");
-  const [confirmPassword, setConfirmPw]   = useState("");
-  const [errors, setErrors]               = useState<{
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPw] = useState("");
+  const [errors, setErrors] = useState<{
     email?: string; password?: string; confirmPassword?: string; form?: string;
   }>({});
   const [submitting, setSubmitting] = useState(false);
+  const [confirmTouched, setConfirmTouched] = useState(false);
 
   useEffect(() => {
     if (!isLoading && isAuthenticated) router.replace("/dashboard");
@@ -42,6 +43,20 @@ export default function SignupPage() {
     password === confirmPassword &&
     confirmPassword.length > 0;
 
+  // Real-time inline validation for confirm password
+  const validateConfirmPassword = useCallback(() => {
+    if (!confirmTouched || confirmPassword.length === 0) return;
+    if (password !== confirmPassword) {
+      setErrors((p) => ({ ...p, confirmPassword: "Passwords do not match." }));
+    } else {
+      setErrors((p) => ({ ...p, confirmPassword: undefined }));
+    }
+  }, [password, confirmPassword, confirmTouched]);
+
+  useEffect(() => {
+    validateConfirmPassword();
+  }, [validateConfirmPassword]);
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const v = validate();
@@ -63,8 +78,8 @@ export default function SignupPage() {
 
   const passwordStrength = password.length === 0 ? 0
     : password.length < 8 ? 1
-    : password.length < 12 ? 2
-    : 3;
+      : password.length < 12 ? 2
+        : 3;
 
   const strengthLabel = ["", "Weak", "Good", "Strong"];
   const strengthColor = ["", "bg-red-400", "bg-amber-400", "bg-emerald-500"];
@@ -135,15 +150,13 @@ export default function SignupPage() {
                     {[1, 2, 3].map((level) => (
                       <div
                         key={level}
-                        className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${
-                          passwordStrength >= level ? strengthColor[passwordStrength] : "bg-slate-100"
-                        }`}
+                        className={`h-1.5 flex-1 rounded-full transition-all duration-300 ${passwordStrength >= level ? strengthColor[passwordStrength] : "bg-slate-100"
+                          }`}
                       />
                     ))}
                   </div>
-                  <span className={`text-xs font-medium ${
-                    passwordStrength === 1 ? "text-red-500" : passwordStrength === 2 ? "text-amber-500" : "text-emerald-500"
-                  }`}>
+                  <span className={`text-xs font-medium ${passwordStrength === 1 ? "text-red-500" : passwordStrength === 2 ? "text-amber-500" : "text-emerald-500"
+                    }`}>
                     {strengthLabel[passwordStrength]}
                   </span>
                 </div>
@@ -155,7 +168,8 @@ export default function SignupPage() {
               type="password"
               placeholder="Repeat your password"
               value={confirmPassword}
-              onChange={(e) => { setConfirmPw(e.target.value); setErrors((p) => ({ ...p, confirmPassword: undefined })); }}
+              onChange={(e) => { setConfirmPw(e.target.value); setConfirmTouched(true); }}
+              onBlur={() => setConfirmTouched(true)}
               error={errors.confirmPassword}
               autoComplete="new-password"
             />

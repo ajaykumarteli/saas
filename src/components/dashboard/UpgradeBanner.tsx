@@ -18,7 +18,21 @@ export function UpgradeBanner() {
     setConfirmed(true);
   }
 
-  if (confirmed) return null;
+  if (confirmed) {
+    return (
+      <div className="flex items-center gap-3 p-5 rounded-2xl bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 shadow-sm">
+        <span className="text-3xl">🎉</span>
+        <div>
+          <p className="text-base font-bold text-emerald-800">
+            You&apos;ve been upgraded to Pro!
+          </p>
+          <p className="text-sm text-emerald-600 mt-0.5">
+            All features are now unlocked. Enjoy unlimited AI power and priority support.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 p-6 text-white shadow-xl shadow-violet-200">
